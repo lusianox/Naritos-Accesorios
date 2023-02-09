@@ -49,6 +49,7 @@
                 <p class="texto-footer">© Naritos Accesorios 2023 - Buenos Aires, Argentina.</p>
             </footer>
         </aside>
+
         <main>
             <h2 class="titulo-principal">Carrito</h2>
             <div class="contenedor-carrito">
@@ -71,7 +72,17 @@
                     </div>
                 </div>
 
-                <p id="carrito-comprado" class="carrito-comprado disabled">¡Gracias por tu compra! <i class="bi bi-emoji-laughing"></i></p>
+                <!-- <p id="carrito-comprado" class="carrito-comprado disabled">¡Gracias por tu compra! <i class="bi bi-emoji-laughing"></i></p> -->
+                <fieldset id="carrito-comprado" class="carrito-comprado disabled">
+                    <legend>¿Cómo desea abonar?</legend>
+                    <label for="pago">Seleccione método de pago:
+                        <select name="pago" id="metodoPago">
+                            <option value="AR" selected>Efectivo</option>
+                            <option value="CH">Mercado Pago</option>
+                            <option value="BR">Transferencia bancaria (CBU)</option>
+                        </select>
+                    </label>
+                </fieldset>
 
             </div>
         </main>

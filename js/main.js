@@ -4,38 +4,32 @@ fetch("./js/aritos.json")
     .then(response => response.json())
     .then(data => {
         aritos = data;
-        cargarProductos(aritos);
+        cargarProductosAritos(aritos);
     })
 
-
 const contenedorAritos = document.querySelector("#contenedor-aritos");
-const botonesCategorias = document.querySelectorAll(".boton-categoria");
-const tituloPrincipal = document.querySelector("#titulo-principal");
-let botonesAgregar = document.querySelectorAll(".producto-agregar");
-const numerito = document.querySelector("#numerito");
 
-// let collares = [];
+let collares = [];
 
-// // fetch("./js/collares.json")
-// //     .then(response => response.json())
-// //     .then(data => {
-// //         collares = data;
-// //         cargarProductos(collares);
-// //     })
-// // const contenedorCollares = document.querySelector("#contenedor-collares");
+fetch("./js/collares.json")
+    .then(response => response.json())
+    .then(data => {
+        collares = data;
+        cargarProductosCollares(collares);
+    })
+
+const contenedorCollares = document.querySelector("#contenedor-collares");
 
 
-botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
-    aside.classList.remove("aside-visible");
-}))
 
+function agregarProducto(producto) {
+    carrito.push(producto);
+    console.log("Producto agregado al carrito:", producto);
+}
 
-function cargarProductos(productosElegidos) {
-
+function cargarProductosAritos(productosElegidos) {
     contenedorAritos.innerHTML = "";
-
     productosElegidos.forEach(producto => {
-
         const div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
@@ -46,36 +40,34 @@ function cargarProductos(productosElegidos) {
                 <button class="producto-agregar" id="${producto.id}">Agregar</button>
             </div>
         `;
-
         contenedorAritos.append(div);
     })
-
     actualizarBotonesAgregar();
 }
 
-
-botonesCategorias.forEach(boton => {
-    boton.addEventListener("click", (e) => {
-
-        botonesCategorias.forEach(boton => boton.classList.remove("active"));
-        e.currentTarget.classList.add("active");
-
-        if (e.currentTarget.id != "inicio") {
-            const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
-            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
-            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
-            cargarProductos(productosBoton);
-        } else {
-            tituloPrincipal.innerText = "Inicio";
-            cargarProductos(productos);
-        }
-
+function cargarProductosCollares(productosElegidos) {
+    contenedorCollares.innerHTML = "";
+    productosElegidos.forEach(producto => {
+        const div = document.createElement("div");
+        div.classList.add("producto");
+        div.innerHTML = `
+            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+            <div class="producto-detalles">
+                <h3 class="producto-titulo">${producto.titulo}</h3>
+                <p class="producto-precio">$${producto.precio}</p>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            </div>
+        `;
+        contenedorCollares.append(div);
     })
-});
+    actualizarBotonesAgregar();
+}
+
+let carrito = [];
+
 
 function actualizarBotonesAgregar() {
-    botonesAgregar = document.querySelectorAll(".producto-agregar");
-
+    const botonesAgregar = document.querySelectorAll(".producto-agregar");
     botonesAgregar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
     });
@@ -92,8 +84,8 @@ if (productosEnCarritoLS) {
     productosEnCarrito = [];
 }
 
-function agregarAlCarrito(e) {
 
+function agregarAlCarrito(e) {
     Toastify({
         text: "Producto agregado",
         duration: 3000,
@@ -102,32 +94,40 @@ function agregarAlCarrito(e) {
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "#f4c6a3",
-          borderRadius: "2rem",
-          textTransform: "uppercase",
-          fontSize: ".75rem"
+            background: "#f4c6a3",
+            borderRadius: "2rem",
+            textTransform: "uppercase",
+            fontSize: ".75rem"
         },
         offset: {
             x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
             y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
-          },
-        onClick: function(){} // Callback after click
-      }).showToast();
+        },
+        onClick: function () { } // Callback after click
+    }).showToast();
 
     const idBoton = e.currentTarget.id;
-    const productoAgregado = aritos.find(producto => producto.id === idBoton);
-
-    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
-        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-        productosEnCarrito[index].cantidad++;
+    let productoAgregado;
+    if (aritos.find(producto => producto.id === idBoton)) {
+        productoAgregado = aritos.find(producto => producto.id === idBoton);
     } else {
-        productoAgregado.cantidad = 1;
+        productoAgregado = collares.find(producto => producto.id === idBoton);
+    }
+
+    if (productosEnCarrito.some(producto => producto.id === idBoton)) {
+        const productoActualizado = productosEnCarrito.map(producto =>
+            producto.id === idBoton
+                ? { ...producto, cantidad: producto.cantidad + 1 }
+                : producto
+        );
+        productosEnCarrito = productoActualizado;
+    } else {
+        productoAgregado = { ...productoAgregado, cantidad: 1 };
         productosEnCarrito.push(productoAgregado);
     }
 
-    actualizarNumerito();
-
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    actualizarNumerito();
 }
 
 function actualizarNumerito() {

@@ -140,3 +140,26 @@ function comprarCarrito() {
     contenedorCarritoComprado.classList.remove("disabled");
 
 }
+
+
+//                     ---------------------------- OPCION DE PAGO EN EFECTIVO: ----------------------------
+
+function enviar(){
+    let inputValue1 = { valor: document.getElementById("nombreProducto").value, id: document.getElementById("nombreProducto").id, valor2: document.getElementById("fname").value };
+    let inputValue2 = { valor: document.getElementById("cantidad").value, id: document.getElementById("cantidad").id };
+    let inputValue3 = { valor: document.getElementById("total").value, id: document.getElementById("total").id };
+    
+
+    function constructor(tata, date2, date3) {
+        this.nombreProducto = tata;
+        this.cantidad = date2;
+        this.precio = date3;
+    }
+
+    const mensaje = new constructor(inputValue, inputValue1, inputValue2, inputValue3);
+
+    console.log(mensaje);
+
+    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' NUEVO PEDIDO ' + ' Producto: ' + JSON.stringify(nombreProducto) + ' ' + ' Cantidad: ' + JSON.stringify(cantidad) + ' ' + ' Precio final: ' + JSON.stringify(total);
+
+}

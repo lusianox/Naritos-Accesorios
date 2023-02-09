@@ -1,0 +1,11 @@
+[
+    {
+        "id": "collar-01",
+        "titulo": "Perlas",
+        "imagen": "./img/aritos/nirvana.jpg",
+        "categoria": {
+            "nombre": "Collar",
+            "id": "collar"
+        },
+        "precio": 700
+}]

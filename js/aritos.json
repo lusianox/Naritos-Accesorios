@@ -1,0 +1,162 @@
+[
+    {
+        "id": "arito-01",
+        "titulo": "Nirvana",
+        "imagen": "./img/aritos/nirvana.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 650
+    },
+    {
+        "id": "arito-02",
+        "titulo": "Ryuk",
+        "imagen": "./img/aritos/ryuk.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 600
+    },
+    {
+        "id": "arito-03",
+        "titulo": "Arctic Monkeys",
+        "imagen": "./img/aritos/arctic-monkeys.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-04",
+        "titulo": "Narutomaki",
+        "imagen": "./img/aritos/narutomaki.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abrigo-05",
+        "titulo": "Coldplay",
+        "imagen": "./img/aritos/coldplay.jpg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-06",
+        "titulo": "Corazón roto",
+        "imagen": "./img/aritos/corazon-roto.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-07",
+        "titulo": "Dua Lipa",
+        "imagen": "./img/aritos/dua-lipa.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-08",
+        "titulo": "Harry Potter",
+        "imagen": "./img/aritos/harry-potter.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-09",
+        "titulo": "Escorpión negro",
+        "imagen": "./img/aritos/escorpion-negro.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-10",
+        "titulo": "Escorpión rojo",
+        "imagen": "./img/aritos/escorpion-rojo.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-11",
+        "titulo": "Luna",
+        "imagen": "./img/aritos/luna.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-12",
+        "titulo": "Messi",
+        "imagen": "./img/aritos/messi.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-13",
+        "titulo": "Nana",
+        "imagen": "./img/aritos/nana.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-14",
+        "titulo": "Rei",
+        "imagen": "./img/aritos/rei.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-13",
+        "titulo": "Rick y Morty",
+        "imagen": "./img/aritos/nana.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "arito-13",
+        "titulo": "Bjork",
+        "imagen": "./img/camisetas/08.jpg",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 1000
+    }
+]

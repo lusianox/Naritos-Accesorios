@@ -29,11 +29,11 @@ function cargarProductosCarrito() {
                 <img class="carrito-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
                 <div class="carrito-producto-titulo">
                     <small>Título</small>
-                    <h3>${producto.titulo}</h3>
+                    <h3 id="caca1">${producto.titulo}</h3>
                 </div>
                 <div class="carrito-producto-cantidad">
                     <small>Cantidad</small>
-                    <p>${producto.cantidad}</p>
+                    <p id="caca2">${producto.cantidad}</p>
                 </div>
                 <div class="carrito-producto-precio">
                     <small>Precio</small>
@@ -141,25 +141,25 @@ function comprarCarrito() {
 
 }
 
-
-//                     ---------------------------- OPCION DE PAGO EN EFECTIVO: ----------------------------
-
 function enviar(){
-    let inputValue1 = { valor: document.getElementById("nombreProducto").value, id: document.getElementById("nombreProducto").id, valor2: document.getElementById("fname").value };
-    let inputValue2 = { valor: document.getElementById("cantidad").value, id: document.getElementById("cantidad").id };
-    let inputValue3 = { valor: document.getElementById("total").value, id: document.getElementById("total").id };
-    
+    let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
+    let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
+    let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
 
-    function constructor(tata, date2, date3) {
-        this.nombreProducto = tata;
-        this.cantidad = date2;
-        this.precio = date3;
+    function ConstructorPedido(producto, cantidad, total) {
+        this.producto = producto;
+        this.cantidad = cantidad;
+        this.total = total;
     }
 
-    const mensaje = new constructor(inputValue, inputValue1, inputValue2, inputValue3);
+    let producto = inputProducto.valor;
+    let cantidad = inputCantidad.valor;
+    let total = inputTotal.valor;
 
-    console.log(mensaje);
+    
+    const nuevoPedido = new ConstructorPedido(inputProducto, inputCantidad, inputTotal);
 
-    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' NUEVO PEDIDO ' + ' Producto: ' + JSON.stringify(nombreProducto) + ' ' + ' Cantidad: ' + JSON.stringify(cantidad) + ' ' + ' Precio final: ' + JSON.stringify(total);
+    console.log(nuevoPedido);
 
+    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' NUEVO PEDIDO ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + ' Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + ' Precio final: ' + JSON.stringify(inputTotal.valor);
 }

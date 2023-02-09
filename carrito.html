@@ -13,9 +13,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="/css/line-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    
 </head>
 <body>
-
     <div class="wrapper">
         <header class="header-mobile">
             <h1 class="logo">Naritos Accesorios</h1>
@@ -49,7 +49,6 @@
                 <p class="texto-footer">© Naritos Accesorios 2023 - Buenos Aires, Argentina.</p>
             </footer>
         </aside>
-
         <main>
             <h2 class="titulo-principal">Carrito</h2>
             <div class="contenedor-carrito">
@@ -68,26 +67,61 @@
                             <p>Total:</p>
                             <p id="total">$3000</p>
                         </div>
-                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Comprar Ahora
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Con que deseas pagar?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" class="container">
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <a href="https://wa.me/5491168985455" target="_blank">
+                    <button id="carrito-acciones-comprar" class="carrito-acciones-comprar" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Mercado pago</button>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <button id="carrito-acciones-comprar" class="carrito-acciones-comprar" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Transferencia Bancaria</button>
+                  </div>
+                  <div class="col">
+                    <button id="carrito-acciones-comprar" class="carrito-acciones-comprar" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="enviar()">Pago en Efectivo</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+                        
                     </div>
                 </div>
 
-                <!-- <p id="carrito-comprado" class="carrito-comprado disabled">¡Gracias por tu compra! <i class="bi bi-emoji-laughing"></i></p> -->
-                <fieldset id="carrito-comprado" class="carrito-comprado disabled">
-                    <legend>¿Cómo desea abonar?</legend>
-                    <label for="pago">Seleccione método de pago:
-                        <select name="pago" id="metodoPago">
-                            <option value="AR" selected>Efectivo</option>
-                            <option value="CH">Mercado Pago</option>
-                            <option value="BR">Transferencia bancaria (CBU)</option>
-                        </select>
-                    </label>
-                </fieldset>
+                    <p id="carrito-comprado" class="carrito-comprado disabled">¡Gracias por tu compra! <i class="bi bi-emoji-laughing"></i></p>
+                
 
-            </div>
-        </main>
-    </div>
-    
+                    
+                </div>
+            </main>
+        </div>
+                    
+  
+
+
+  
+
+
+    <script src="./bootstrap/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/carrito.js"></script>

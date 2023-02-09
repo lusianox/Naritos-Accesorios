@@ -299,8 +299,7 @@ main {
     color: var(--clr-white);
     text-transform: uppercase;
     cursor: pointer;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-radius: 1rem;
 }
 
 .header-mobile {
@@ -422,3 +421,9 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+#collares, #aritos, #info{
+    padding-top: 50px;
+}
+
+

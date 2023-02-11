@@ -299,8 +299,7 @@ main {
     color: var(--clr-white);
     text-transform: uppercase;
     cursor: pointer;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-radius: 1rem;
 }
 
 .header-mobile {
@@ -313,6 +312,19 @@ main {
 
 .disabled {
     display: none;
+}
+
+.tituloenvio {
+    text-align: center;
+}
+
+#mapita {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 350px;
 }
 
 /*** MEDIA QUERIES ***/
@@ -422,3 +434,9 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+#collares, #aritos, #info{
+    padding-top: 50px;
+}
+
+

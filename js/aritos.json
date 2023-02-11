@@ -21,13 +21,13 @@
     },
     {
         "id": "arito-03",
-        "titulo": "Arctic Monkeys",
+        "titulo": "AM",
         "imagen": "./img/aritos/arctic-monkeys.jpg",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-04",
@@ -37,7 +37,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "abrigo-05",
@@ -47,7 +47,7 @@
             "nombre": "Abrigos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-06",
@@ -57,7 +57,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-07",
@@ -67,7 +67,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-08",
@@ -77,7 +77,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-09",
@@ -87,7 +87,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-10",
@@ -97,7 +97,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-11",
@@ -107,7 +107,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-12",
@@ -117,7 +117,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-13",
@@ -127,7 +127,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-14",
@@ -137,7 +137,7 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-13",
@@ -147,16 +147,16 @@
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "arito-13",
-        "titulo": "Bjork",
-        "imagen": "./img/camisetas/08.jpg",
+        "titulo": "Gorillaz",
+        "imagen": "./img/aritos/gorillaz.jpg",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
         },
-        "precio": 1000
+        "precio": 600
     }
 ]

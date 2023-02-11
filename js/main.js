@@ -69,9 +69,9 @@ let carrito = [];
 function actualizarBotonesAgregar() {
     const botonesAgregar = document.querySelectorAll(".producto-agregar");
     botonesAgregar.forEach(boton => {
-        boton.addEventListener("click", agregarAlCarrito);
+      boton.addEventListener("click", agregarAlCarrito);
     });
-}
+  }
 
 let productosEnCarrito;
 
@@ -94,17 +94,17 @@ function agregarAlCarrito(e) {
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-            background: "#f4c6a3",
-            borderRadius: "2rem",
-            textTransform: "uppercase",
-            fontSize: ".75rem"
+          background: "#f4c6a3",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+          fontSize: ".75rem"
         },
         offset: {
             x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
             y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
-        },
-        onClick: function () { } // Callback after click
-    }).showToast();
+          },
+        onClick: function(){} // Callback after click
+      }).showToast();
 
     const idBoton = e.currentTarget.id;
     let productoAgregado;
@@ -114,15 +114,15 @@ function agregarAlCarrito(e) {
         productoAgregado = collares.find(producto => producto.id === idBoton);
     }
 
-    if (productosEnCarrito.some(producto => producto.id === idBoton)) {
+    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
         const productoActualizado = productosEnCarrito.map(producto =>
             producto.id === idBoton
-                ? { ...producto, cantidad: producto.cantidad + 1 }
-                : producto
+            ? { ...producto, cantidad: producto.cantidad + 1 }
+            : producto
         );
         productosEnCarrito = productoActualizado;
     } else {
-        productoAgregado = { ...productoAgregado, cantidad: 1 };
+        productoAgregado = {...productoAgregado, cantidad: 1};
         productosEnCarrito.push(productoAgregado);
     }
 
@@ -134,5 +134,9 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+
+
+
+
 
 

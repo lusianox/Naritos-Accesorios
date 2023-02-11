@@ -216,4 +216,5 @@ function banco(){
 
 window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- TRANSFERENCIA BANCARIA ';
 
+    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' NUEVO PEDIDO ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + ' Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + ' Precio final: ' + JSON.stringify(inputTotal.valor);
 }

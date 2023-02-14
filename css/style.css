@@ -246,7 +246,7 @@ main {
     border-radius: 1rem;
 }
 
-.carrito-producto-imagen {
+.carrito-producto-imagen, #aritos-nuevos {
     width: 4rem;
     border-radius: 1rem;
 }
@@ -312,6 +312,19 @@ main {
 
 .disabled {
     display: none;
+}
+
+.tituloenvio {
+    text-align: center;
+}
+
+#mapita {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 350px;
 }
 
 /*** MEDIA QUERIES ***/
@@ -426,4 +439,8 @@ main {
     padding-top: 50px;
 }
 
-
+#lista-opciones{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}

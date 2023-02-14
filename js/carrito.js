@@ -141,7 +141,9 @@ function comprarCarrito() {
 
 }
 
-function enviar(){
+// ------------------------------------------------------------------------------ PAGO EN EFECTIVO ----------------------------------------------------------------------
+
+function efectivo(){
     let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
     let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
     let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
@@ -160,6 +162,59 @@ function enviar(){
     const nuevoPedido = new ConstructorPedido(inputProducto, inputCantidad, inputTotal);
 
     console.log(nuevoPedido);
+
+    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- PAGO EN EFECTIVO ';
+}
+
+// -------------------------------------------------------------------------------- PAGO CON MERCADO PAGO --------------------------------------------------------------------
+
+function mp(){
+    let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
+    let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
+    let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
+
+    function ConstructorPedido(producto, cantidad, total) {
+        this.producto = producto;
+        this.cantidad = cantidad;
+        this.total = total;
+    }
+
+    let producto = inputProducto.valor;
+    let cantidad = inputCantidad.valor;
+    let total = inputTotal.valor;
+
+    
+    const nuevoPedido = new ConstructorPedido(inputProducto, inputCantidad, inputTotal);
+
+    console.log(nuevoPedido);
+
+    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- TRANSFERENCIA MERCADO PAGO';
+}
+
+
+// ------------------------------------------------------------------------ PAGO CON TRANSFERENCIA BANCARIA ----------------------------------------------------------------------
+
+function banco(){
+    let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
+    let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
+    let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
+
+    function ConstructorPedido(producto, cantidad, total) {
+        this.producto = producto;
+        this.cantidad = cantidad;
+        this.total = total;
+    }
+
+    let producto = inputProducto.valor;
+    let cantidad = inputCantidad.valor;
+    let total = inputTotal.valor;
+
+    
+    const nuevoPedido = new ConstructorPedido(inputProducto, inputCantidad, inputTotal);
+
+    console.log(nuevoPedido);
+
+window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- TRANSFERENCIA BANCARIA ';
 
     window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' NUEVO PEDIDO ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + ' Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + ' Precio final: ' + JSON.stringify(inputTotal.valor);
 }

@@ -1,0 +1,13 @@
+[
+    {
+        "id": "llavero-01",
+        "titulo": "Dibu",
+        "imagen": "./img/llaveros/dibu1.jpg",
+        "imagenes": ["./img/llaveros/dibu1.jpg", "./img/llaveros/dibu2.jpg"],
+        "categoria": {
+            "nombre": "Llaveros",
+            "id": "llaveros"
+        },
+        "precio": 500
+}
+]

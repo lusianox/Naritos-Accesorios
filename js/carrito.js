@@ -29,11 +29,11 @@ function cargarProductosCarrito() {
                 <img class="carrito-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
                 <div class="carrito-producto-titulo">
                     <small>Título</small>
-                    <h3 id="caca1">${producto.titulo}</h3>
+                    <h3 id="nombreProducto">${producto.titulo}</h3>
                 </div>
                 <div class="carrito-producto-cantidad">
                     <small>Cantidad</small>
-                    <p id="caca2">${producto.cantidad}</p>
+                    <p id="cantidadProducto">${producto.cantidad}</p>
                 </div>
                 <div class="carrito-producto-precio">
                     <small>Precio</small>
@@ -144,8 +144,8 @@ function comprarCarrito() {
 // ------------------------------------------------------------------------------ PAGO EN EFECTIVO ----------------------------------------------------------------------
 
 function efectivo(){
-    let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
-    let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
+    let inputProducto = { valor: document.getElementById("nombreProducto").innerHTML, id: document.getElementById("nombreProducto").id };
+    let inputCantidad = { valor: document.getElementById("cantidadProducto").innerHTML, id: document.getElementById("cantidadProducto").id };
     let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
 
     function ConstructorPedido(producto, cantidad, total) {
@@ -163,14 +163,14 @@ function efectivo(){
 
     console.log(nuevoPedido);
 
-    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- PAGO EN EFECTIVO ';
+    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor)  + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- PAGO EN EFECTIVO ';
 }
 
 // -------------------------------------------------------------------------------- PAGO CON MERCADO PAGO --------------------------------------------------------------------
 
 function mp(){
-    let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
-    let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
+    let inputProducto = { valor: document.getElementById("nombreProducto").innerHTML, id: document.getElementById("nombreProducto").id };
+    let inputCantidad = { valor: document.getElementById("cantidadProducto").innerHTML, id: document.getElementById("cantidadProducto").id };
     let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
 
     function ConstructorPedido(producto, cantidad, total) {
@@ -195,8 +195,8 @@ function mp(){
 // ------------------------------------------------------------------------ PAGO CON TRANSFERENCIA BANCARIA ----------------------------------------------------------------------
 
 function banco(){
-    let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
-    let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
+    let inputProducto = { valor: document.getElementById("nombreProducto").innerHTML, id: document.getElementById("nombreProducto").id };
+    let inputCantidad = { valor: document.getElementById("cantidadProducto").innerHTML, id: document.getElementById("cantidadProducto").id };
     let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
 
     function ConstructorPedido(producto, cantidad, total) {
@@ -216,4 +216,5 @@ function banco(){
 
 window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- TRANSFERENCIA BANCARIA ';
 
+    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' NUEVO PEDIDO ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + ' Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + ' Precio final: ' + JSON.stringify(inputTotal.valor);
 }

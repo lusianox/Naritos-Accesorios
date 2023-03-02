@@ -23,7 +23,7 @@ let previusTitle = document.title
 
 window.addEventListener('blur', () => {
     previusTitle = document.title
-    document.title = 'A donde vas 🙄, seguí chusmeando'
+    document.title = 'A donde vas 🙄 seguí chusmeando'
 })
 
 window.addEventListener('focus', () => {

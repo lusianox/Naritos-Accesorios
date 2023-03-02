@@ -246,7 +246,7 @@ main {
     border-radius: 1rem;
 }
 
-.carrito-producto-imagen {
+.carrito-producto-imagen, #aritos-nuevos {
     width: 4rem;
     border-radius: 1rem;
 }
@@ -439,4 +439,8 @@ main {
     padding-top: 50px;
 }
 
-
+#lista-opciones{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}

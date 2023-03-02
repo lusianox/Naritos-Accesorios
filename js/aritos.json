@@ -1,8 +1,173 @@
-[
-    {
+[    {
+    "id": "arito-14",
+    "titulo": "Alas",
+    "imagen": "/img/aritos-verde/alas1.jpeg",
+    "imagenes": ["./img/aritos-verde/alas1.jpeg", "./img/aritos-verde/alas2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 650
+},
+{
+    "id": "arito-15",
+    "titulo": "Araña",
+    "imagen": "/img/aritos-verde/araña1.jpeg",
+    "imagenes": ["./img/aritos-verde/araña1.jpeg", "./img/aritos-verde/araña2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-16",
+    "titulo": "Billie Elish",
+    "imagen": "/img/aritos-verde/billie-eilish1.jpeg",
+    "imagenes": ["./img/aritos-verde/billie-eilish1.jpeg", "./img/aritos-verde/billie-eilish2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-17",
+    "titulo": "Black Pink",
+    "imagen": "/img/aritos-verde/blackpink1.jpeg",
+    "imagenes": ["./img/aritos-verde/blackpink1.jpeg", "./img/aritos-verde/blackpink2.jpeg", "./img/aritos-verde/blackpink3.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-18",
+    "titulo": "Burns",
+    "imagen": "/img/aritos-verde/burns1.jpeg",
+    "imagenes": ["./img/aritos-verde/burns1.jpeg", "./img/aritos-verde/burns2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-19",
+    "titulo": "Dibu",
+    "imagen": "/img/aritos-verde/dibu1.jpeg",
+    "imagenes": ["./img/aritos-verde/dibu1.jpeg", "./img/aritos-verde/dibu2.jpeg", "./img/aritos-verde/dibu3.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 500
+},
+{
+    "id": "arito-20",
+    "titulo": "Gato",
+    "imagen": "/img/aritos-verde/gato1.jpeg",
+    "imagenes": ["./img/aritos-verde/gato1.jpeg", "./img/aritos-verde/gato2.jpeg", "./img/aritos-verde/gato3.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-21",
+    "titulo": "Harry Styles",
+    "imagen": "/img/aritos-verde/harry-styles1.jpeg",
+    "imagenes": ["./img/aritos-verde/harry-styles1.jpeg", "./img/aritos-verde/harry-styles2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-22",
+    "titulo": "Harry Styles",
+    "imagen": "/img/aritos-verde/hello-kitty1.jpeg",
+    "imagenes": ["./img/aritos-verde/hello-kitty1.jpeg", "./img/aritos-verde/hello-kitty2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-23",
+    "titulo": "Kitty",
+    "imagen": "/img/aritos-verde/kitty1.jpeg",
+    "imagenes": ["./img/aritos-verde/kitty1.jpeg", "./img/aritos-verde/kitty2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-24",
+    "titulo": "Mariposa",
+    "imagen": "/img/aritos-verde/mariposa1.jpeg",
+    "imagenes": ["./img/aritos-verde/mariposa1.jpeg", "./img/aritos-verde/mariposa2.jpeg",  "./img/aritos-verde/mariposa3.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-25",
+    "titulo": "Pez",
+    "imagen": "/img/aritos-verde/pez1.jpeg",
+    "imagenes": ["./img/aritos-verde/pez1.jpeg", "./img/aritos-verde/pez2.jpeg", "./img/aritos-verde/pez3.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-26",
+    "titulo": "Sims",
+    "imagen": "/img/aritos-verde/sims1.jpeg",
+    "imagenes": ["./img/aritos-verde/sims1.jpeg", "./img/aritos-verde/sims2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-27",
+    "titulo": "Totoro",
+    "imagen": "/img/aritos-verde/totoro1.jpeg",
+    "imagenes": ["./img/aritos-verde/totoro1.jpeg", "./img/aritos-verde/totoro2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+{
+    "id": "arito-28",
+    "titulo": "Yoda",
+    "imagen": "/img/aritos-verde/yoda1.jpeg",
+    "imagenes": ["./img/aritos-verde/yoda1.jpeg", "./img/aritos-verde/yoda2.jpeg"],
+    "categoria": {
+        "nombre": "Aritos",
+        "id": "aritos"
+    },
+    "precio": 600
+},
+   {
         "id": "arito-01",
         "titulo": "Nirvana",
         "imagen": "./img/aritos/nirvana.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -13,6 +178,7 @@
         "id": "arito-02",
         "titulo": "Ryuk",
         "imagen": "./img/aritos/ryuk.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -23,6 +189,7 @@
         "id": "arito-03",
         "titulo": "AM",
         "imagen": "./img/aritos/arctic-monkeys.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -33,6 +200,7 @@
         "id": "arito-04",
         "titulo": "Narutomaki",
         "imagen": "./img/aritos/narutomaki.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -43,6 +211,7 @@
         "id": "abrigo-05",
         "titulo": "Coldplay",
         "imagen": "./img/aritos/coldplay.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Abrigos",
             "id": "aritos"
@@ -53,6 +222,7 @@
         "id": "arito-06",
         "titulo": "Corazón roto",
         "imagen": "./img/aritos/corazon-roto.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -63,6 +233,7 @@
         "id": "arito-07",
         "titulo": "Dua Lipa",
         "imagen": "./img/aritos/dua-lipa.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -73,6 +244,7 @@
         "id": "arito-08",
         "titulo": "Harry Potter",
         "imagen": "./img/aritos/harry-potter.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -83,6 +255,7 @@
         "id": "arito-09",
         "titulo": "Escorpión negro",
         "imagen": "./img/aritos/escorpion-negro.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -93,6 +266,7 @@
         "id": "arito-10",
         "titulo": "Escorpión rojo",
         "imagen": "./img/aritos/escorpion-rojo.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -103,6 +277,7 @@
         "id": "arito-11",
         "titulo": "Luna",
         "imagen": "./img/aritos/luna.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -113,6 +288,7 @@
         "id": "arito-12",
         "titulo": "Messi",
         "imagen": "./img/aritos/messi.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -123,6 +299,7 @@
         "id": "arito-13",
         "titulo": "Nana",
         "imagen": "./img/aritos/nana.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -133,6 +310,7 @@
         "id": "arito-14",
         "titulo": "Rei",
         "imagen": "./img/aritos/rei.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -140,9 +318,10 @@
         "precio": 600
     },
     {
-        "id": "arito-13",
+        "id": "arito-15",
         "titulo": "Rick y Morty",
-        "imagen": "./img/aritos/nana.jpg",
+        "imagen": "./img/aritos/rick-morty.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
@@ -150,13 +329,102 @@
         "precio": 600
     },
     {
-        "id": "arito-13",
+        "id": "arito-16",
         "titulo": "Gorillaz",
         "imagen": "./img/aritos/gorillaz.jpg",
+        "tipoImagen": "simple",
         "categoria": {
             "nombre": "Aritos",
             "id": "aritos"
         },
         "precio": 600
+    },
+    {
+        "id": "arito-17",
+        "titulo": "Rosalía",
+        "imagen": "./img/aritos/rosalia.jpg",
+        "tipoImagen": "simple",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 600
+    },
+    {
+        "id": "arito-18",
+        "titulo": "Mariposa",
+        "imagen": "./img/aritos/mariposa.jpg",
+        "tipoImagen": "simple",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 600
+    },
+    {
+        "id": "arito-19",
+        "titulo": "Osito",
+        "imagen": "./img/aritos/oso-cariñoso.jpg",
+        "tipoImagen": "simple",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 600
+    },
+    {
+        "id": "arito-20",
+        "titulo": "Scream",
+        "imagen": "./img/aritos/scream.jpg",
+        "tipoImagen": "simple",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 600
+    },
+    {
+        "id": "arito-21",
+        "titulo": "Girasol",
+        "imagen": "./img/aritos/girasol.jpg",
+        "tipoImagen": "simple",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 600
+    },
+    {
+        "id": "arito-22",
+        "titulo": "Attack on titan",
+        "imagen": "./img/aritos/attack-on-titan.jpg",
+        "tipoImagen": "simple",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 600
+    },
+    {
+        "id": "arito-23",
+        "titulo": "Star Wars",
+        "imagen": "./img/aritos/star-wars.jpg",
+        "tipoImagen": "simple",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 650
+    },
+    {
+        "id": "arito-100",
+        "titulo": "Darth Vader",
+        "imagen": "./img/aritos/darth-vader.jpg",
+        "tipoImagen": "simple",
+        "categoria": {
+            "nombre": "Aritos",
+            "id": "aritos"
+        },
+        "precio": 650
     }
 ]

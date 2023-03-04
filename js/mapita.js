@@ -49,3 +49,24 @@ var marcador5 = L.circleMarker(L.latLng(-34.6775445,-58.5610044),{
     opacity: 1,
     fillOpacity: 0.6,
 }).addTo(map);
+
+// Definir una función que muestre u oculte el elemento "mapita" según corresponda
+function actualizarMapita() {
+    // Obtener el elemento aside
+    const asideElement = document.querySelector('aside');
+  
+    // Obtener el elemento div con el ID "mapita"
+    const mapitaElement = document.querySelector('#mapita');
+  
+    if (asideElement.classList.contains('aside-visible')) {
+      // Si el elemento aside tiene la clase "aside-visible", ocultar el elemento "mapita"
+      mapitaElement.style.display = 'none';
+    } else {
+      // Si el elemento aside no tiene la clase "aside-visible", mostrar el elemento "mapita"
+      mapitaElement.style.display = 'block';
+    }
+  }
+  
+  // Ejecutar la función "actualizarMapita" cada segundo
+  setInterval(actualizarMapita, 1000);
+  

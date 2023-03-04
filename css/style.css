@@ -8,6 +8,7 @@
     --clr-red: #ff0000;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +16,25 @@
     font-family: 'Rubik', sans-serif;
 }
 
+.centrarlogoindex{
+    text-align:center;
+}
+
 .logoindex{
     width: 70%;
-    margin-left: 35px;
-    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border: 5px solid #ffff;
 }
+
+.logo {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-right: 20px;
+}
+
+
 
 .iconos-redes a{
     width: 30px;
@@ -75,10 +89,7 @@ aside {
 
 
 
-.logo {
-    font-weight: 400;
-    font-size: 1.3rem;
-}
+
 
 .menu {
     display: flex;
@@ -304,6 +315,7 @@ main {
 
 .header-mobile {
     display: none;
+    
 }
 
 .close-menu {
@@ -428,14 +440,13 @@ main {
 }
 
 
-
 @media screen and (max-width: 400px) {
     .contenedor-productos {
         grid-template-columns: 1fr;
     }
 }
 
-#collares, #aritos, #info{
+#collares, #aritos, #llaveros, #info{
     padding-top: 50px;
 }
 
@@ -443,4 +454,32 @@ main {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+}
+
+
+@media screen and (max-width: 343px) {
+    html {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 396px) {
+    html {
+        width: 400px;
+    }
+}
+
+#mapita{
+    border-radius: 10px;
+    border-color: #f4c6a3;
+}
+
+@media screen and (max-width: 431px) {
+    #mapita {
+        width: 300px;
+    }
+}
+
+.envios{
+    padding-top: 10px;
 }

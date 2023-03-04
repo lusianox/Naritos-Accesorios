@@ -29,11 +29,11 @@ function cargarProductosCarrito() {
                 <img class="carrito-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
                 <div class="carrito-producto-titulo">
                     <small>Título</small>
-                    <h3 id="caca1">${producto.titulo}</h3>
+                    <h3 id="nombreProducto">${producto.titulo}</h3>
                 </div>
                 <div class="carrito-producto-cantidad">
                     <small>Cantidad</small>
-                    <p id="caca2">${producto.cantidad}</p>
+                    <p id="cantidadProducto">${producto.cantidad}</p>
                 </div>
                 <div class="carrito-producto-precio">
                     <small>Precio</small>
@@ -143,78 +143,107 @@ function comprarCarrito() {
 
 // ------------------------------------------------------------------------------ PAGO EN EFECTIVO ----------------------------------------------------------------------
 
-function efectivo(){
-    let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
-    let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
-    let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
-
-    function ConstructorPedido(producto, cantidad, total) {
-        this.producto = producto;
-        this.cantidad = cantidad;
-        this.total = total;
+function efectivo() {
+    // Buscar todos los elementos con la clase "nombreProducto" y "cantidadProducto"
+    const productos = document.querySelectorAll("#nombreProducto");
+    const cantidades = document.querySelectorAll("#cantidadProducto");
+  
+    // Crear un array para almacenar todos los productos y cantidades
+    const listaProductos = [];
+  
+    // Recorrer todos los elementos y agregar cada producto y cantidad al array
+    for (let i = 0; i < productos.length; i++) {
+      const producto = productos[i].innerHTML;
+      const cantidad = cantidades[i].innerHTML;
+      listaProductos.push({ producto, cantidad });
     }
-
-    let producto = inputProducto.valor;
-    let cantidad = inputCantidad.valor;
-    let total = inputTotal.valor;
-
-    
-    const nuevoPedido = new ConstructorPedido(inputProducto, inputCantidad, inputTotal);
-
-    console.log(nuevoPedido);
-
-    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- PAGO EN EFECTIVO ';
-}
+  
+    // Obtener el valor del campo "total"
+    const total = document.getElementById("total").innerHTML;
+  
+    // Crear el mensaje con la lista de productos y el total
+    let mensaje = "¡NUEVO PEDIDO!\n\n";
+    for (let i = 0; i < listaProductos.length; i++) {
+      const { producto, cantidad } = listaProductos[i];
+      mensaje += `${producto} - Cantidad: ${cantidad}\n`;
+    }
+    mensaje += `\nPrecio total: ${total}\n\nPAGO EN EFECTIVO`;
+  
+    // Codificar el mensaje para incluirlo en la URL
+    const mensajeCodificado = encodeURIComponent(mensaje);
+  
+    // Redirigir a WhatsApp con el mensaje prellenado
+    window.location.href = `https://api.whatsapp.com/send?phone=+5491168985455&text=${mensajeCodificado}`;
+  }
+  
 
 // -------------------------------------------------------------------------------- PAGO CON MERCADO PAGO --------------------------------------------------------------------
 
-function mp(){
-    let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
-    let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
-    let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
-
-    function ConstructorPedido(producto, cantidad, total) {
-        this.producto = producto;
-        this.cantidad = cantidad;
-        this.total = total;
+function mp() {
+    // Buscar todos los elementos con la clase "nombreProducto" y "cantidadProducto"
+    const productos = document.querySelectorAll("#nombreProducto");
+    const cantidades = document.querySelectorAll("#cantidadProducto");
+  
+    // Crear un array para almacenar todos los productos y cantidades
+    const listaProductos = [];
+  
+    // Recorrer todos los elementos y agregar cada producto y cantidad al array
+    for (let i = 0; i < productos.length; i++) {
+      const producto = productos[i].innerHTML;
+      const cantidad = cantidades[i].innerHTML;
+      listaProductos.push({ producto, cantidad });
     }
-
-    let producto = inputProducto.valor;
-    let cantidad = inputCantidad.valor;
-    let total = inputTotal.valor;
-
-    
-    const nuevoPedido = new ConstructorPedido(inputProducto, inputCantidad, inputTotal);
-
-    console.log(nuevoPedido);
-
-    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- TRANSFERENCIA MERCADO PAGO';
-}
+  
+    // Obtener el valor del campo "total"
+    const total = document.getElementById("total").innerHTML;
+  
+    // Crear el mensaje con la lista de productos y el total
+    let mensaje = "¡NUEVO PEDIDO!\n\n";
+    for (let i = 0; i < listaProductos.length; i++) {
+      const { producto, cantidad } = listaProductos[i];
+      mensaje += `${producto} - Cantidad: ${cantidad}\n`;
+    }
+    mensaje += `\nPrecio total: ${total}\n\nPAGO POR MERCADO PAGO`;
+  
+    // Codificar el mensaje para incluirlo en la URL
+    const mensajeCodificado = encodeURIComponent(mensaje);
+  
+    // Redirigir a WhatsApp con el mensaje prellenado
+    window.location.href = `https://api.whatsapp.com/send?phone=+5491168985455&text=${mensajeCodificado}` + ` ` + `link.mercadopago.com.ar/andreseloy`;
+  }
 
 
 // ------------------------------------------------------------------------ PAGO CON TRANSFERENCIA BANCARIA ----------------------------------------------------------------------
 
-function banco(){
-    let inputProducto = { valor: document.getElementById("caca1").innerHTML, id: document.getElementById("caca1").id };
-    let inputCantidad = { valor: document.getElementById("caca2").innerHTML, id: document.getElementById("caca2").id };
-    let inputTotal = { valor: document.getElementById("total").innerHTML, id: document.getElementById("total").id };
-
-    function ConstructorPedido(producto, cantidad, total) {
-        this.producto = producto;
-        this.cantidad = cantidad;
-        this.total = total;
+function banco() {
+    // Buscar todos los elementos con la clase "nombreProducto" y "cantidadProducto"
+    const productos = document.querySelectorAll("#nombreProducto");
+    const cantidades = document.querySelectorAll("#cantidadProducto");
+  
+    // Crear un array para almacenar todos los productos y cantidades
+    const listaProductos = [];
+  
+    // Recorrer todos los elementos y agregar cada producto y cantidad al array
+    for (let i = 0; i < productos.length; i++) {
+      const producto = productos[i].innerHTML;
+      const cantidad = cantidades[i].innerHTML;
+      listaProductos.push({ producto, cantidad });
     }
-
-    let producto = inputProducto.valor;
-    let cantidad = inputCantidad.valor;
-    let total = inputTotal.valor;
-
-    
-    const nuevoPedido = new ConstructorPedido(inputProducto, inputCantidad, inputTotal);
-
-    console.log(nuevoPedido);
-
-window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' ¡NUEVO PEDIDO! ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + '- Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + '- Precio final: ' + JSON.stringify(inputTotal.valor) + ' ' + '- TRANSFERENCIA BANCARIA ';
-
-    window.location.href = 'https://api.whatsapp.com/send?phone=+5491168985455&text=%20Web:' + ' NUEVO PEDIDO ' + ' Producto: ' + JSON.stringify(inputProducto.valor) + ' ' + ' Cantidad: ' + JSON.stringify(inputCantidad.valor) + ' ' + ' Precio final: ' + JSON.stringify(inputTotal.valor);
-}
+  
+    // Obtener el valor del campo "total"
+    const total = document.getElementById("total").innerHTML;
+  
+    // Crear el mensaje con la lista de productos y el total
+    let mensaje = "¡NUEVO PEDIDO!\n\n";
+    for (let i = 0; i < listaProductos.length; i++) {
+      const { producto, cantidad } = listaProductos[i];
+      mensaje += `${producto} - Cantidad: ${cantidad}\n`;
+    }
+    mensaje += `\nPrecio total: ${total}\n\nPAGO POR TRANSFERENCIA BANCARIA`;
+  
+    // Codificar el mensaje para incluirlo en la URL
+    const mensajeCodificado = encodeURIComponent(mensaje);
+  
+    // Redirigir a WhatsApp con el mensaje prellenado
+    window.location.href = `https://api.whatsapp.com/send?phone=+5491168985455&text=${mensajeCodificado}` + ` ` + `link.mercadopago.com.ar/andreseloy`;
+  }

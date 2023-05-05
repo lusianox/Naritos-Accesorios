@@ -479,7 +479,20 @@ main {
         width: 300px;
     }
 }
+ 
 
-.envios{
-    padding-top: 10px;
+
+  .envios .col-2 {
+    padding: 0 5px;
+  }
+
+.encuentros{
+    color: #f4c6a3; /* cambia el color del texto a azul */
+  text-decoration: underline; /* agrega una línea debajo del texto */
+  cursor: pointer; /* cambia el cursor del ratón para indicar que es clickable */
+  font-size: medium;
+}
+
+.boton-comprar-pop{
+    padding-bottom: 10px;
 }

@@ -1,198 +1,252 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naritos Accesorios</title>
-    <meta name="description" content="La mejor tienda de accesorios online en Argentina">
-    <meta name="keywords" content="Tienda, Anime, Otaku, Accesorios, Aritos, Collares, Aros, Indie">
-    <link rel="shortcut icon" href="img/favicon/naritos sin nombre png.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="/css/line-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- CSS mapita -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-    crossorigin=""/>
-    <!-- JavaScript del leaflet -->
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-    crossorigin=""></script>
-  </head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naritos Accesorios</title>
+  <meta name="description" content="La mejor tienda de accesorios online en Argentina">
+  <meta name="keywords" content="Tienda, Anime, Otaku, Accesorios, Aritos, Collares, Aros, Indie">
+  <link rel="shortcut icon" href="img/favicon/naritos sin nombre png.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="/css/line-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- CSS mapita -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <!-- JavaScript del leaflet -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+
 <body data-bs-spy="scroll" data-bs-target=".movimiento">
 
-    <div class="wrapper" >
-        <header class="header-mobile">
-            <h1 class="logo">Naritos Accesorios</h1>
-            <button class="open-menu" id="open-menu">
-                <i class="bi bi-list"></i>
-            </button>
-        </header>
+  <div class="wrapper">
+    <header class="header-mobile">
+      <h1 class="logo">Naritos Accesorios</h1>
+      <button class="open-menu" id="open-menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </header>
 
-        <aside>
-            <button class="close-menu" id="close-menu">
-                <i class="bi bi-x"></i>
-            </button>
-            <header id="centrar-header">
-                <h1 class="logo">ଘ(੭*ˊᵕˋ)੭ଘ♡ଓ</h1>
-                <div class="centrarlogoindex">
-                <img src="img/favicon/naritos sin nombre 2.png" class="d-lg-block rounded-circle logoindex" alt="Logo del emprendimiento">
-                </div>
-              </header>
-            
+    <aside>
+      <button class="close-menu" id="close-menu">
+        <i class="bi bi-x"></i>
+      </button>
+      <header id="centrar-header">
+        <h1 class="logo">ଘ(੭*ˊᵕˋ)੭ଘ♡ଓ</h1>
+        <div class="centrarlogoindex">
+          <img src="img/favicon/naritos sin nombre 2.png" class="d-lg-block rounded-circle logoindex"
+            alt="Logo del emprendimiento">
+        </div>
+      </header>
 
-            <nav>
-                <ul class="menu">
-                    <li class="nav-item">
-                        <a class="nav-link boton-menu boton-categoria active menu-item" href="#inicio">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link boton-menu boton-categoria menu-item" href="#aritos">Aritos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link boton-menu boton-categoria menu-item" href="#collares">Collares</a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link boton-menu boton-categoria menu-item" href="#llaveros">Llaveros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link boton-menu boton-categoria menu-item" href="#info">Información</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="boton-menu boton-carrito" href="./carrito.html">
-                            <i class="bi bi-cart-fill"></i>Carrito<span id="numerito" class="numerito">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
 
-            <footer>
-                <div class="col-auto">
-                   <u><h6>Mis redes</h6></u>
+      <nav>
+        <ul class="menu">
+          <li class="nav-item">
+            <a class="nav-link boton-menu boton-categoria active menu-item" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link boton-menu boton-categoria menu-item" href="#aritos">Aritos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link boton-menu boton-categoria menu-item" href="#collares">Collares</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link boton-menu boton-categoria menu-item" href="#llaveros">Llaveros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link boton-menu boton-categoria menu-item" href="#info">Información</a>
+          </li>
+          <li class="nav-item">
+            <a class="boton-menu boton-carrito" href="./carrito.html">
+              <i class="bi bi-cart-fill"></i>Carrito<span id="numerito" class="numerito">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-                    <div class="iconos-redes">
-                      <a href="https://www.instagram.com/naritos.accesorios/"><i class="bi bi-instagram"></i></a>
-                      <a href="https://wa.me/+5491168985455"><i class="bi bi-whatsapp"></i></a>
-                      <a href="https://cafecito.app/naritosaccesorios"><i class="bi bi-cup-hot"></i></a>
-                      <a href="https://www.tiktok.com/@naritos.accesorios"><i class="bi bi-tiktok"></i></a>
-                    </div>
-                  </div>
+      <footer>
+        <div class="col-auto">
+          <u>
+            <h6>Mis redes</h6>
+          </u>
 
-                <p class="texto-footer">© 2023 Naritos Accesorios - Buenos Aires, Argentina.</p>
-            </footer>
-        </aside>
+          <div class="iconos-redes">
+            <a href="https://www.instagram.com/naritos.accesorios/"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/+5491168985455"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://cafecito.app/naritosaccesorios"><i class="bi bi-cup-hot"></i></a>
+            <a href="https://www.tiktok.com/@naritos.accesorios"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <p class="texto-footer">© 2023 Naritos Accesorios - Buenos Aires, Argentina.</p>
+      </footer>
+    </aside>
+
+    <main>
+      <section id="inicio">
+        <h2 class="titulo-principal" id="titulo-principal">Tienda online</h2>
+
+        <h1>Naritos Accesorios</h1>
+        <h4>Productos más vendidos</h4>
+
+        <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+
+          <!-- COLOCAR PRODUCTOS MAS VENDIDOS EN EL CARRUSEL -->
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/aritos/mas-vendido-rosalia.jpg" class="d-block w-100" alt="Aritos de Rosalia color rojo">
+            </div>
+            <div class="carousel-item">
+              <img src="img/aritos/mas-vendido-gorillaz.jpg" class="d-block w-100" alt="Aritos de Gorillaz color azul">
+            </div>
+            <div class="carousel-item">
+              <img src="img/aritos/mas-vendido-rosalia.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <h4>¿Quiénes somos?</h4>
+        <p>Naritos Accesorios es un emprendimiento personal de Naru y asociados, especializado en la venta de collares y
+          aritos. Actualmente se focaliza más en la venta de aritos, pero también hay una buena variedad de collares.
+        </p>
+        <br>
+        <p>Todas tus dudas serán respondidas al comunicarte mediante la cuenta de Instagram o WhatsApp.</p>
+        <p>Puedes seguir a Naritos Accesorios en Instagram y Tik Tok para estar al tanto de las novedades. Además,
+          recientemente añadimos un link de Cafecito, donde podrás mostrar tu apoyo al emprendimiento dejando propinas.
+        </p>
+      </section>
+
+      <section id="aritos">
+        <h2>Todos los aritos</h2>
+        <div id="contenedor-aritos" class="contenedor-productos"></div>
+      </section>
+
+
+      <section id="collares">
+        <h2>Todos los collares</h2>
+        <div id="contenedor-collares" class="contenedor-productos"></div>
+      </section>
+
+      <section id="llaveros">
+        <h2>Todos los llaveros</h2>
+        <div id="contenedor-llaveros" class="contenedor-productos"></div>
+      </section>
+
+      <!-- SECTION TEST -->
+      <section id="info">
+        <h2>Información general</h2>
+
+        <h5 class="tituloenvio">Punto de encuento para retiro en persona</h5>
+        <p>A la hora de concretar la compra podrás acordar con la vendedora un punto de encuentro para ir a retirar tu
+          pedido.</p>
+
+        <div id="mapita"></div>
+
+        <div id="lista-opciones">
+          <b><i>
+              <ul>Las opciones son:</b></i>
+          <li><a href="#" class="encuentros" los-encuentros="encuentro1">McDonald's Haedo</a></li>
+          <li><a href="#" class="encuentros" los-encuentros="encuentro2">Plaza San Justo</a></li>
+          <li><a href="#" class="encuentros" los-encuentros="encuentro3">Plaza del cañón (San Justo)</a></li>
+          <li><a href="#" class="encuentros" los-encuentros="encuentro4">Plaza Mitre (Ramos Mejía)</a></li>
+          <li><a href="#" class="encuentros" los-encuentros="encuentro5">Plaza Flores (Flores)</a></li>
+          </ul>
+        </div>
+
+        <h5 class="tituloenvio">Envíos</h5>
+        <div class="container text-center envios">
+          <div class="row justify-content-center">
+            <div class="col-6 col-md-4 col-lg-2 mb-3 mb-md-0">
+              <a href="https://www.correoargentino.com.ar/" target="_blank"><img src="/img/envios/correo-argentino.png" alt="" class="img-fluid"></a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3 mb-md-0">
+              <a href="https://www.e-pick.com.ar/home"><img src="/img/envios/XAwzBdlQNKwr5WiSDJb2_aRIB2oRYZ2MOyOum (1).png" alt="" class="img-fluid"></a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <a href="https://www.instagram.com/motoenvios.elcuervo/"><img src="img/envios/cuervo.png" alt="" class="img-fluid"></a>      
+            </div>
+          </div>
+        </div>
         
-        <main>
-            <section id="inicio">
-            <h2 class="titulo-principal" id="titulo-principal">Tienda online</h2>
 
-            <h1>Naritos Accesorios</h1>
-            <h4>Productos más vendidos</h4>
+        <br>
+        <h5 class="tituloenvio">Pedidos personalizados</h5>
+        <p>Comunicate conmigo mediante Instagram o WhatsApp para consultar la posibilidad de llevar a cabo un diseño
+          personalizado.</p>
+        <p>Los precios varían dependiendo del tamaño del mismo.</p>
+      </section>
+      <div id="canvas-container"></div>
+    <script>
+      // Obtener el contenedor del canvas
+      var container = document.getElementById('canvas-container');
 
-            <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
+      // Crear una nueva escena
+      var scene = new THREE.Scene();
 
-                <!-- COLOCAR PRODUCTOS MAS VENDIDOS EN EL CARRUSEL -->
-                
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="img/aritos/mas-vendido-rosalia.jpg" class="d-block w-100" alt="Aritos de Rosalia color rojo">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/aritos/mas-vendido-gorillaz.jpg" class="d-block w-100" alt="Aritos de Gorillaz color azul">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/aritos/mas-vendido-rosalia.jpg" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
+      // Crear una nueva cámara
+      var camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+      camera.position.z = 5;
 
-              <h4>¿Quiénes somos?</h4>
-              <p>Naritos Accesorios es un emprendimiento personal de Naru y asociados, especializado en la venta de collares y aritos. Actualmente se focaliza más en la venta de aritos, pero también hay una buena variedad de collares.</p>
-              <br>
-              <p>Todas tus dudas serán respondidas al comunicarte mediante la cuenta de Instagram o WhatsApp.</p>
-              <p>Puedes seguir a Naritos Accesorios en Instagram y Tik Tok para estar al tanto de las novedades. Además, recientemente añadimos un link de Cafecito, donde podrás mostrar tu apoyo al emprendimiento dejando propinas.</p>
-            </section>
+      // Crear un nuevo renderizador
+      var renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
 
-            <section id="aritos">
-              <h2>Todos los aritos</h2>
-              <div id="contenedor-aritos" class="contenedor-productos"></div>
-            </section>
+      // Agregar el renderizador al contenedor
+      container.appendChild(renderer.domElement);
 
+      // Cargar el archivo .obj
+      var loader = new THREE.OBJLoader();
+      loader.load('12228_Dog_v1_L2.obj', function (object) {
+        scene.add(object);
+      });
 
-            <section id="collares">
-              <h2>Todos los collares</h2>
-              <div id="contenedor-collares" class="contenedor-productos"></div>
-            </section>
+      // Animar la escena
+      function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+      }
+      animate();
+    </script>
+    </main>
+  </div>
 
-            <section id="llaveros">
-              <h2>Todos los llaveros</h2>
-              <div id="contenedor-llaveros" class="contenedor-productos"></div>
-            </section>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script src="js/mapita.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="three.js-master/src/Three.js"></script>
 
-            <!-- SECTION TEST --> 
-            <section id="info">
-              <h2>Información general</h2>
-
-              <h5 class="tituloenvio">Punto de encuento para retiro en persona</h5>
-              <p>A la hora de concretar la compra podrás acordar con la vendedora un punto de encuentro para ir a retirar tu pedido.</p>
-              
-              <div id="mapita"></div>
-
-              <div id="lista-opciones">
-              <b><i><ul>Las opciones son:</b></i>
-                <li><a href="#" los-encuentros="encuentro1">McDonald's Haedo</a></li>
-                <li><a href="#" los-encuentros="encuentro2">Plaza San Justo</a></li>
-                <li><a href="#" los-encuentros="encuentro3">Plaza del cañón (San Justo)</a></li>
-                <li><a href="#" los-encuentros="encuentro4">Plaza Mitre (Ramos Mejía)</a></li>
-                <li><a href="#" los-encuentros="encuentro5">Plaza Flores (Flores)</a></li>
-              </ul>
-            </div>
-
-            <h5 class="tituloenvio">Envíos</h5>
-            <div class="container text-center envios">
-              <div class="row justify-content-center">
-                <div class="col-2">
-                  <img src="/img/envios/correo-argentino.png" alt="" height="50px">
-                </div>
-                <div class="col-2">
-                  <img src="/img/envios/XAwzBdlQNKwr5WiSDJb2_aRIB2oRYZ2MOyOum (1).png" alt="" height="40px">
-                </div>
-                <div class="col-2">
-                  <img src="img/envios/cuervo.png" alt="" height="50px">
-                </div>
-              </div>
-            </div>
-            <br>
-            <h5 class="tituloenvio">Pedidos personalizados</h5>
-            <p>Comunicate conmigo mediante Instagram o WhatsApp para consultar la posibilidad de llevar a cabo un diseño personalizado.</p>
-            <p>Los precios varían dependiendo del tamaño del mismo.</p>
-            </section>
-        </main>
-    </div>
-    
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-     crossorigin=""></script>
-    <script src="js/mapita.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/menu.js"></script>
 </body>
+
 </html>

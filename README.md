@@ -1,44 +1,43 @@
+# Naritos Accesorios - E-commerce Platform
 
-# Naritos Accesorios 
+## Project Overview
 
-Página web Ecommerce para un emprendimiento de Accesorios como aritos y collares en Buenos Aires, Argentina. La necesidad del cliente era que los compradores tuvieran la posibilidad de hacer pagos mucho mas sencilla.
+This project is an e-commerce platform developed for a real small business focused on women's accessories.
 
+The main goal was to deliver a simple, functional, and user-friendly solution to showcase products and facilitate online sales, prioritizing usability and fast delivery over complex architecture.
 
+---
 
-## Color Reference
+## Technologies Used
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #F4C6A3 |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #375F9D |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #212529 |
+- JavaScript  
+- HTML  
+- CSS  
+- Netlify (deployment)
 
+---
 
+## Context & Scope
 
+This project was developed early in my learning journey and reflects my approach at that time, focusing on delivering a working solution aligned with real business needs.
 
+The business later closed, and as a result, the project did not continue receiving updates or maintenance.
 
-## Run Locally
+---
 
-Para instalar la pagina de Naritos Accesorios, solo tenes que clonar el repositorio.
+## Reflections & Learnings
 
-```bash
-  git clone https://github.com/lusianox/Naritos-Accesorios.git
-```
+Looking back, I recognize several areas that I would approach differently today, such as:
 
-Y despues correr el "Live Server" en Visual Studio Code.
+- Clear separation between business logic and presentation
+- Stronger validation and error handling
+- A dedicated backend architecture (API-based approach)
+- Improved scalability and maintainability
 
+This project represents an important step in my progression as a developer and helped shape my current focus on backend development using C# and .NET.
 
-    
-## Authors
+---
 
-- [@lusianox](https://github.com/lusianox)
-- [@dev-eloy](https://github.com/dev-eloy)
+## Current Focus
 
-
-
-# Screenshots
-
-![Home Page](https://i.imgur.com/E9R4BZu.png)
---------------------------
-![Carrito Page](https://i.imgur.com/BvltGgh.png)
-
+My current work is centered on backend development with C# and .NET, with an emphasis on business logic, API design, and maintainable architectures.
